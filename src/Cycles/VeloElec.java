@@ -10,13 +10,13 @@ public class VeloElec extends Velo{
 		this.facteurPuissancePoteur = facteurPuissanceMoteur;
 	}
 	public VeloElec(double diamRoue, double facteurPuissanceMoteur) {
-		this.braquet=25;
+		this.braquet=super.getDEFAUT_BRAQUET();
 		this.diamRoue=diamRoue;
 		this.facteurPuissancePoteur = facteurPuissanceMoteur;
 	}
 	public VeloElec() {
-		this.braquet=25;
-		this.diamRoue=12.56;
+		this.braquet=super.getBraquet();
+		this.diamRoue=super.getDiamRoue();
 		this.facteurPuissancePoteur = DEFAUT_fACTEUR_PUISSANCE_MOTEUR;
 	}
 	
@@ -35,7 +35,7 @@ public class VeloElec extends Velo{
 		this.facteurPuissancePoteur = facteurPuissancePoteur;
 	}
 	public String toString() {
-		return "VeloElec [facteurPuissanceMoteur="+"facteurPuissanceMoteur"+"]";
+		return "VeloElec [facteurPuissanceMoteur="+facteurPuissancePoteur+"]";
 	}
 	public double getPuissance(double FrequenceCoupDePedale) {
 		return super.getPuissance(FrequenceCoupDePedale);
